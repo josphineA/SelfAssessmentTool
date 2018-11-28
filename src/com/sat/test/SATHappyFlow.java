@@ -1,24 +1,24 @@
 package com.sat.test;
 
-
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
 import com.sat.base.BaseClass;
-import com.sat.pages.BeforeYouStart;
 import com.sat.pages.HomePage;
-import com.sat.pages.Level1Assessment;
-import com.sat.pages.UniversitySearch;
+import com.sat.pages.TermsAndCond;
 
-public class UniversitySearchTest extends BaseClass {
-	UniversitySearch unisearch;
+public class SATHappyFlow extends BaseClass {
 
-	public UniversitySearchTest() {
+	TermsAndCond termsCondition;
+
+	public SATHappyFlow() {
 		super();
 	}
-
 	//test cases should be separated -- independent with each other
 	//before each test case -- launch the browser and login
 	//@test -- execute test case
@@ -27,30 +27,29 @@ public class UniversitySearchTest extends BaseClass {
 	@BeforeMethod
 	public void setUp() {
 		driverInitialization();
-		driver.get(prop.getProperty("Uniseacrh"));
-		unisearch = new UniversitySearch();	
-		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		System.out.println("=Terms setUp==");
+		driver.get(prop.getProperty("termscondurl"));
+		termsCondition = new TermsAndCond();	
 	}
 	
 
 	
 	@Test(priority=1)
-	public void UniversitySearchTest() throws InterruptedException{
+	public void clickAgreeTest() throws InterruptedException{
+		System.out.println("clickAgreeTest in Test file");
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(5000);			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
-		unisearch.institution();
+		termsCondition.clickAgree();
 	}
 	
-		
+
 	@AfterMethod
 	public void tearDown(){
 		//driver.quit();
+
 	}
-	
-	
 
 }

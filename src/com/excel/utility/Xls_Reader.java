@@ -96,13 +96,13 @@ public Xls_Reader(String path) {
 			cell.setCellType(Cell.CELL_TYPE_STRING);
 			
 			if(cell.getCellType()==Cell.CELL_TYPE_STRING) {
-				  System.out.println("===cellText string===" +  cell.getStringCellValue());
+				//  System.out.println("===cellText string===" +  cell.getStringCellValue());
 
 				  return cell.getStringCellValue();
 			}else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC || cell.getCellType()==Cell.CELL_TYPE_FORMULA ){
 				 
 				String cellText  = String.valueOf(cell.getNumericCellValue());
-				  System.out.println("===cellText===" + cellText);
+				  //System.out.println("===cellText===" + cellText);
 
 //				  if (HSSFDateUtil.isCellDateFormatted(cell)) {
 //			           // format in form of M/D/YY

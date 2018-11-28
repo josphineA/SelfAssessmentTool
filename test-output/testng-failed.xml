@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.sat.test.TermsAndCondTest">
+      <class name="com.sat.test.SATHappyFlow">
         <methods>
-          <include name="tearDown"/>
-          <include name="clickAgreeTest"/>
           <include name="setUp"/>
+          <include name="clickAgreeTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.sat.test.TermsAndCondTest -->
+      </class> <!-- com.sat.test.SATHappyFlow -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -31,7 +31,7 @@ public class BaseClass {
 	public BaseClass() {
 		try {
 			prop=new Properties();
-			FileInputStream ip=new FileInputStream("C:\\Eclipse\\workspace\\SelfAssessmentTool\\src\\com\\sat\\config\\config.properties");
+			FileInputStream ip=new FileInputStream("C:\\Eclipse\\workspace\\SelfAssessmentTool2\\src\\com\\sat\\config\\config.properties");
 			prop.load(ip);
 		}catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -48,7 +48,7 @@ public class BaseClass {
 		  options.addArguments("--disable-notifications");		          
 		  driver = new ChromeDriver(options);	
 		  //  wait = new WebDriverWait(driver, 15);
-		  reader= new Xls_Reader("C:\\Eclipse\\workspace\\SelfAssessmentTool\\src\\com\\excel\\testdata\\SATData.xlsx");
+		  reader= new Xls_Reader("C:\\Eclipse\\workspace\\SelfAssessmentTool2\\src\\com\\excel\\testdata\\SATData.xlsx");
 //		  driver.get(prop.getProperty("homepageurl"));
 	  }
 }
